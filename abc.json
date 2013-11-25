@@ -1,0 +1,15 @@
+{
+    "name": "real-time",
+    "comName":"RealTime",
+    "version": "1.0",
+    "desc": "时间更新组件",
+    "tag":"时间",
+    "githubName":"shmnhdouble2013",
+    "author": {
+        "name": "jia.huangj",
+        "email": "wb_jia.huangj@alibaba-inc.com",
+        "page": ""
+    },
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
