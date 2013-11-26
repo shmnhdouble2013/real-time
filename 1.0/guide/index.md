@@ -3,7 +3,7 @@
 RealTime 是一个实时模拟服务器时间组件，通过它你可以方便的获取当前的服务器时间。内置提供 3套 时间更新机制：
 
 * 版本：1.0
-* 作者：水木年华double <huangjia2015@gmail.com>
+* 作者：水木年华double ```<huangjia2015@gmail.com>```
 * demo：[http://gallery.kissyui.com/real-time/1.0/demo/index.html](http://gallery.kissyui.com/real-time/1.0/demo/index.html)
 
 1. 本地时间----- 服务器初始化时间serviceTime配置项 和 更新url接口 都没配置情况下，则自动按照 计算机 本地时间 计算；  
@@ -102,7 +102,7 @@ autoComplement(hour, minutes, seconds, isHideSeconds);
 getMillisecond(str);
 
 
-	/**
+/**
 * 根据 时分秒 毫秒数 获取 时分 字符串
 * @method getHMstr(number)
 * @param {number} 时分秒 毫秒数
