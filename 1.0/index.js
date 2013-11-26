@@ -38,8 +38,8 @@ KISSY.add(function(S){
 			// 是否开启 自动更新
 			isAutoUpdate: true,
 			
-            // 异步更新服务器时间 配置，需要 >= 1分钟 -- 默认
-            ajaxUpMinutes: 1,
+            // 异步更新服务器时间 配置，最低间隔 需要 >= 1分钟 -- 默认1小时
+            ajaxUpMinutes: 60,
 
             // 本地时间更新频率 秒
             localTimeUpdate: 1              
