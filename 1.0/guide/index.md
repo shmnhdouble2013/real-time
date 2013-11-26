@@ -14,7 +14,7 @@ RealTime 是一个实时模拟服务器时间组件，通过它你可以方便�
 
 
 ## 初始化组件
-    ```javascript
+    ```
     S.use('gallery/real-time/1.0/index', function (S, RealTime) {
         var real-time = new RealTime({
          		serviceTime: S.now(),  // 支持  时间字符串 或者 毫秒数 2种方式
@@ -24,7 +24,7 @@ RealTime 是一个实时模拟服务器时间组件，通过它你可以方便�
     ```
 ## API说明 --- 配置参数
 
-    ```javascript
+    ```
     	// 默认配置
         var defCfg = {
 
@@ -51,7 +51,7 @@ RealTime 是一个实时模拟服务器时间组件，通过它你可以方便�
 
 ## API说明 --- 主要方法
     
-    ```javascript
+    ```
         // 获取服务器时间 -- 毫秒数 ps:当为本地时间模式时 返回null
         getCurrTime();
 
@@ -67,7 +67,7 @@ RealTime 是一个实时模拟服务器时间组件，通过它你可以方便�
 
 ## API说明 --- 其他时间方法列举
 
-    ```javascript
+    ```
         /**
         * 根据日期毫秒数，获取 具体时间 字符串信息 
         * @method getDateStr(number); 
