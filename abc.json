@@ -2,13 +2,13 @@
     "name": "real-time",
     "comName":"RealTime",
     "version": "1.0",
-    "desc": "时间更新组件",
+    "desc": "模拟服务器时间更新组件",
     "tag":"时间",
     "githubName":"shmnhdouble2013",
     "author": {
         "name": "水木年华double",
-        "email": "wb_jia.huangj@alibaba-inc.com",
-        "page": ""
+        "email": "huangjia2015@gmail.com",
+        "page": "https://github.com/shmnhdouble2013/real-time.git"
     },
     "type": "kissy-gallery",
     "type-url": "http://gallery.kissyui.com/guide"
