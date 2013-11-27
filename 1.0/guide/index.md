@@ -1,17 +1,17 @@
 ## 综述
 
-RealTime 是一个实时模拟服务器时间组件，通过它你可以方便的获取当前的服务器时间。内置提供 3套 时间更新机制：
+RealTime 是一个实时模拟服务器时间组件，通过它你可以方便的获取当前的服务器时间，计算精度<=1秒。
 
 * 版本：1.0
 * 作者：水木年华double ```<huangjia2015@gmail.com>```
 * demo：[http://gallery.kissyui.com/real-time/1.0/demo/index.html](http://gallery.kissyui.com/real-time/1.0/demo/index.html)
 
-1. 本地时间----- 服务器初始化时间serviceTime配置项 和 更新url接口 都没配置情况下，则自动按照 计算机 本地时间 计算；  
-2. 时间差模拟时间----- 配置服务器时间serviceTime，但没有 配置 后续更新 url接口，则依据 服务器初始化时间差 模拟出服务器当前时间； 
-3. ajax间隔性异步纠正时间---- 配置url更新接口，则会 间隔性异步更新校正本地模拟运算服务器时间，异步默认以 jsonp方式，避免跨域烦劳；  
-	   
-组件默认 是自动更新时间，当然你也可以 通过 isAutoUpdateUi 配置项 选择是否自动更新。又或者 调用 startAutoUpdateUi方法 开启 自动更新， stopAutoUpdateUi方法停止 自动更新
 
+* 内置提供 3套时间更新模式，智能转换和性能优化，间隔性同步纠正本地计算服务器时间：
+1. 本地时间----- 服务器初始化时间serviceTime配置项 和 更新url接口 都没配置情况下，则自动按照 计算机 本地时间 计算；  
+2. 时间差模拟时间----- 配置服务器时间serviceTime，未配置时间更新url接口，则依据初始化时间差 计算模拟出服务器当前时间； 
+3. ajax异步间隔性同步时间---- 配置url更新接口，则会 间隔性(默认1小时)同步更新校正本地模拟服务器时间，异步默认以 jsonp方式，避免跨域烦劳；  
+	   
 
 ## 初始化组件
 
@@ -54,6 +54,13 @@ var defCfg = {
 ## API说明 --- 主要方法
     
 ```javascript
+
+// 开启时间 自动更新
+startAutoUpdateUi();
+
+// 停止 自动更新
+stopAutoUpdateUi();
+
 // 获取服务器时间 -- 毫秒数 ps:当为本地时间模式时 返回null
 getCurrTime();
 
@@ -65,6 +72,24 @@ getCurrTimeHMSstr();
 
 // 获取 服务器 与 本地差异 -- 毫秒数  ps:无差异时候 返回null
 getServerLocalDiff();
+```
+
+## API说明 -- 事件
+
+```javascript
+/**  
+* 本地时间更新 模式发生
+* @event localTimeUpdateMod 
+* @param {number} ev.time 当前时间
+*/
+'localTimeUpdateMod'
+
+/**  
+* 异步更新服务器时间 模式发生
+* @event ajaxTimeUpdateMod  
+* @param {number} ev.time 当前时间
+*/
+'ajaxTimeUpdateMod'
 ```
 
 ## API说明 --- 其他时间方法列举
