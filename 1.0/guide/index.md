@@ -7,7 +7,9 @@ RealTime 是一个实时模拟服务器时间组件，通过它你可以方便�
 * demo：[http://gallery.kissyui.com/real-time/1.0/demo/index.html](http://gallery.kissyui.com/real-time/1.0/demo/index.html)
 
 
-## 内置提供 3套时间更新模式，智能转换和性能优化，间隔性同步纠正本地计算服务器时间：
+- - -
+
+* 内置提供 3套时间更新模式，智能转换和性能优化，间隔性同步纠正本地计算服务器时间：
 
 1. 本地时间----- 服务器初始化时间serviceTime配置项 和 更新url接口 都没配置情况下，则自动按照 计算机 本地时间 计算；  
 2. 时间差模拟时间----- 配置服务器时间serviceTime，未配置时间更新url接口，则依据初始化时间差 计算模拟出服务器当前时间； 
